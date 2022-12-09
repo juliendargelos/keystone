@@ -7,7 +7,7 @@
     "dev": "keystone dev",
     "start": "keystone start",
     "build": "keystone build",
-    "postbuild": "keystone prisma migrate deploy",
+    "prebuild": "keystone prisma migrate deploy",
     "railway": "railway",
     "seed-data": "keystone --seed-data"
   },
