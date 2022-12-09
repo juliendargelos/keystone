@@ -5,6 +5,7 @@ import { Context } from '.keystone/types';
 
 export default config({
   db: {
+    useMigrations: true,
     provider: 'postgresql',
     url: process.env.DATABASE_URL,
     async onConnect(context: Context) {
