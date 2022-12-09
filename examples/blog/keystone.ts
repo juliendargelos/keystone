@@ -5,8 +5,8 @@ import { Context } from '.keystone/types';
 
 export default config({
   db: {
-    provider: 'sqlite',
-    url: process.env.DATABASE_URL || 'file:./keystone-example.db',
+    provider: 'postgres',
+    url: process.env.DATABASE_URL,
     async onConnect(context: Context) {
       if (process.argv.includes('--seed-data')) {
         await insertSeedData(context);
