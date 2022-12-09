@@ -5,7 +5,7 @@ import { Context } from '.keystone/types';
 
 export default config({
   db: {
-    provider: 'postgres',
+    provider: 'postgresql',
     url: process.env.DATABASE_URL,
     async onConnect(context: Context) {
       if (process.argv.includes('--seed-data')) {
